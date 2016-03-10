@@ -1,0 +1,28 @@
+#!/user/bin/expect 
+#connect the server.
+
+set   server [lindex $argv 0]
+set   paw  "xxxxxxx"
+set   host  "xxxxxxx"
+if { $server eq "test" } {
+	set host  "xxxxxxx"
+	set paw  "xxxxxxx"
+} else {
+	if { $server eq "normal" } {
+		set host  "xxxxxxx"
+		set paw  "xxxxxxx"
+	} else {
+		if { $server eq "normal_bak" } {
+		set host  "xxxxxxx"
+		set paw  "xxxxxxx"
+		} 
+	}
+}
+
+
+spawn ssh root@$host
+expect {
+	"*yes/no" {send  "yes\r"; exp_continue}
+	"*password:" {send  "$paw\r"}
+}
+interact
