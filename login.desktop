@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec="/home/comein/tools/shell/ssh_login.sh"
+Icon=/home/comein/photo/chain-link.png
+Name=Xshell
+Encoding=UTF-8
+Terminal=true
+Type=Application
+Categories=Application;Network;
