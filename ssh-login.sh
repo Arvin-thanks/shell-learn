@@ -1,3 +1,5 @@
 #!/bin/sh
 
-expect	ssh_auto_login $1
+echo  "Enter the server name:"  
+read server
+expect	/home/comein/tools/shell/ssh_auto_login  $server
